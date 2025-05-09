@@ -21,3 +21,9 @@ config/icon="res://icon.svg"
 
 window/size/mode=2
 window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_physics/layer_1="Walls"
+2d_physics/layer_2="Stickies"
+2d_physics/layer_3="Trash"

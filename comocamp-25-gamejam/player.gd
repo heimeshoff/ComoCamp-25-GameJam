@@ -5,6 +5,7 @@ var acceleration := 128.0
 
 var collectied_stickies := 0
 
+signal DropOff(value:int)
 
 func _process(_delta: float) -> void:
 	move_and_slide()
@@ -38,3 +39,8 @@ func render_stickies(amount:int) -> void:
 func _on_pickup_body_entered(body: Node2D) -> void:
 	collectied_stickies += 1
 	body.queue_free()
+
+
+func _on_dump_body_entered(body: Node2D) -> void:
+	DropOff.emit(collectied_stickies)
+	collectied_stickies = 0
