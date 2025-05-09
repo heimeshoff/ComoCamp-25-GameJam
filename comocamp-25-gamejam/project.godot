@@ -16,3 +16,8 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.215686, 0.203922, 0.203922, 1)
 boot_splash/image="uid://buy3ljpv3lad0"
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/mode=2
+window/stretch/mode="viewport"

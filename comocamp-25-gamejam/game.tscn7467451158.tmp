@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp3182scl32d"]
+
+[ext_resource type="Texture2D" uid="uid://eawo5i4p312j" path="res://icon.svg" id="1_80nbo"]
+[ext_resource type="Texture2D" uid="uid://dpd6t0xb1di1f" path="res://media/empty_conference_room.png" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://cufy0tuq81tpi" path="res://player.gd" id="2_feb5d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
+size = Vector2(123, 123)
+
+[node name="Game" type="Node2D"]
+
+[node name="Room" type="Sprite2D" parent="."]
+position = Vector2(720, 712)
+scale = Vector2(1.40625, 1.40625)
+texture = ExtResource("1_e2o6t")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(456, 640)
+script = ExtResource("2_feb5d")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_80nbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_80nbo")
